@@ -1,38 +1,323 @@
-.App {
+body{
+  font-family: 'Lato', sans-serif !important;
+  overflow-x: hidden;
+}
+a.active{
+  text-decoration: none !important;
+}
+.nav-home{
+  display: flex !important;
+}
+.nav-home ul{
+  padding: 1vw 1vw 0;
+  font-size: 1vw;
+  list-style: none;
+}
+.nav-home ul li{
+  font-size: 1em;
+}
+.nav-home ul li:first-child{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.nav-home img{
+  width: 5vw;
+  height: 5vw;
+}
+.nav-link{
+  font-size: 1.5vw;
+}
+.nav-link a{
+  color:black
+}
+.nav-link a:hover{
+  background-color: #1bbc9b !important;
+  color: white !important;
+  cursor: pointer;
+}
+.navbar-nav{
+  width: 40vw;
+  justify-content: space-between;
+}
+.navbar-nav a {
+  font-size: 1.5em;
+}
+.mobile-nav{
+  display: none !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: unset !important;
+  border: 0 !important;
+}
+
+
+
+
+
+.jumbotron{
+  text-align: center;
+  color: white;
+  background-image: url("./static/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: unset !important;
+}
+.jumbotron h1{
+  font-size: 2em;
+  font-weight:100;
+}
+.jumbotron h1 span{
+  font-weight:700;
+}
+.jumbotron p, .title p{
+  font-size: 1.5em;
+  font-weight: 100;
+}
+.jumbo-learn-more, .filter button, .submit-btn{
+  border-radius: unset !important;
+  background-color: #1bbc9b !important;
+  letter-spacing: 2px;
+  border: none !important;
+}
+.down-btn:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.Main{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.title h1{
+  font-size: 2em;
+}
+.filter{
+  position: relative;
+  width: 35vw;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.filter .btn:focus{
+  box-shadow: unset !important;
+  background-color: #16a086 !important;
+}
+.items{
+  margin: 3vw 0;
+  width: 70vw;
+  display: inline-block;
+}
+.items img{
+  width: 12vw;
+}
+.item-img{
+  position: relative;
+}
+.item-img::before {
+    content: "";
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+}
+.item-img:hover::before {
+  background-color: rgba(22, 160, 135, 0.8);
+  mix-blend-mode: color;
+}
+.item-img::after {
+  content: "";
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  font-family: "Font Awesome 5 Free";
+  font-weight:900;
+  font-size:2vw;
+}
+.item-img:hover::after {
+  background: #00000060;
+  border-radius: 50%;
+  width: 4vw;
+  height: 4vw;
+  margin: 4vw;
+  content: "\f002";
+  color: white;
+  margin-left: -8vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+
+
+
+#about{
+  background-color: #16a086;
+  color:white;
+  padding: 3vw 0;
+}
+.agents{
+  margin-top: 3vw;
+}
+#card {
+  background-color: white;
+  width: 20vw;
+  height: 60vh;
+  color: black;
+}
+.agent-img {
+  width: inherit;
+}
+.agent-title{
+  font-size: 1em;
+}
+.agent-position{
+  font-style: italic;
+  font-size: .7em;
+}
+.agent-description{
+  text-align-last: left;
+  padding: 0.6em;
+}
+.Main .agent-description{
+  text-align: left;
+}
+#card::before {
+  content: "";
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  font-family: "Font Awesome 5 Free";
+  font-weight:900;
+  font-size:2vw;
+}
+#card:hover::before {
+  background: rgba(22, 160, 134, .8);
+  /* width: 4vw; */
+  height: 4vw;
+  margin: 8vw 4vw;
+  content: '\f39e \f099 \f0d5 \f434';
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+#contact{
+  padding: 3vw 0;
+}
+.contact-content{
+  margin-top: 3vw;
+  position: relative;
+  display: inline-flex;
+}
+.contact-form, .contact-map{
+  width: 45vw;
+  padding: 0 5vw;
+
+}
+.form-group {
+  display: flex;
+}
+.form-group input:nth-child(2){
+  margin-left: 1vw;
+}
+form input, form textarea {
+  border: 2px solid #bec3c7 !important;
+  border-radius: 0 !important;
+}
+form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  font-style: italic;
+  color:#999999;
+}
+.contact-map-title{
+  text-align-last: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+footer{
+  background-color: #2d3e50;
+  display: flex !important;
+  width: 100vw;
+  color:white;
+  padding: 1vw;
+}
+.footer-content {
+  position: relative;
+  width: 100vw;
+  height: 3vw;
+}
+.footer-text {
+  font-size: 1vw;
+  position: absolute;
+  bottom: 0vw;
+  left: 1vw;
+}
+a.up-btn {
+  font-size: .5vw;
+  position: absolute;
+  right: 1vw;
+  bottom: 0;
+  background-color: #1bbc9b;
+  padding: .5vw;
+}
+
+
+
+@media (max-width: 1024px){
+  .filter{
+    width: 60vw;
   }
-  to {
-    transform: rotate(360deg);
+  .items img {
+    width: 15vw;
+  }
+}
+
+
+@media (max-width: 900px){
+  .filter{
+    width: 80vw;
+  }
+  .items img {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 550px){
+  .nav-home img {
+    width: 10vw;
+    height: 10vw;
+  }
+  .nav-home ul li{
+    font-size: 2.5em !important;
+  }
+  .agent-description{
+    font-size: .7em;
+  }
+  .mobile-nav{
+    display: block !important;
+  }
+  .navbar-nav a{
+    display:none ;
+  }
+  .navbar-nav {
+    display: block !important;
+    width: 100vw;
+    text-align: center;
+  }
+  .navbar{
+    display: grid !important;
+  }
+  .show{
+    display:block !important;
+    width: 100vw;
+    font-size: 2.5em !important;
   }
 }
